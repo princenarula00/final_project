@@ -4,8 +4,6 @@ ADD https://www.free-css.com/assets/files/free-css-templates/download/page293/em
 WORKDIR /var/www/html
 RUN unzip emailler.zip &&\
     mv html/* . &&\
-    rm -rf html &&\
-    touch hello
-    touch hi
+    rm -rf html
 EXPOSE 80
 CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
