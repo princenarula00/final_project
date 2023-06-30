@@ -6,5 +6,6 @@ RUN unzip emailler.zip &&\
     mv html/* . &&\
     rm -rf html &&\
     touch hello
+    touch hi
 EXPOSE 80
 CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
